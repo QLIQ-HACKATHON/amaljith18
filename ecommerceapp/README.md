@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# 🛒 Ecommerce App with Firebase Stripe Checkout Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a complete ecommerce frontend built using **React**, **TypeScript**, **SCSS**, **Material UI**, and **Firebase Functions** for handling Stripe checkout. It includes user authentication, product filtering, cart management, and secure online payments using Stripe.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🛍 Product listing from [DummyJSON API](https://dummyjson.com/products/category/groceries)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node version = v22.17.0
+  -React version = 19.1.0
+- 🔍 Category filtering
+- ➕ Add to Cart and Quantity controls
+- 🧾 Shopping Cart summary with tax calculation
+- 🔐 User Authentication (Login / Signup)
+- 🧑 Admin/User role-based navigation
+- 🧾 Stripe Checkout via Firebase Cloud Functions
+- 🔒 SessionStorage for auth and cart persistence
+- ✅ Toast notifications for feedback
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📁 Folder Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+├── public/
+├── src/
+│ ├── assets/ # Images, logos
+│ ├── components/ # Reusable UI components
+│ ├── context/ # Auth, Cart, Product contexts
+│ ├── custom-hooks/ # Axios hooks for fetching data
+│ ├── pages/ # Page components (Home, Login, Cart, etc.)
+│ ├── router/ # React Router configuration
+│ ├── styles/ # Global SCSS files
+│ ├── types/ # TypeScript interfaces
+│ └── App.tsx
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the Repository
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/QLIQ-HACKATHON/amaljith18/tree/main/ecommerceapp
+
+npm install
+npm run dev
 ```
