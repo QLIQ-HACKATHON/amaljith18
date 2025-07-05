@@ -1,0 +1,50 @@
+.category-row {
+  padding: 20px;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .category-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .category-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 10px;
+    border-radius: 12px;
+    min-width: 80px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &.active {
+      background-color: #f0f0f0;
+      border: 2px solid #2196f3;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
