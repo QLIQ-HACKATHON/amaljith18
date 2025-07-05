@@ -45,3 +45,5 @@ git clone https://github.com/QLIQ-HACKATHON/amaljith18/tree/main/ecommerceapp
 npm install
 npm run dev
 ```
+
+Login admin defalut - email - admin@gmail.com password - admin123
