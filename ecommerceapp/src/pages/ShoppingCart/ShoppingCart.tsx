@@ -35,7 +35,6 @@ const ShoppingCart = () => {
       <h2>Shopping Cart ({cartItems.length} items)</h2>
 
       <div className="cart-container">
-        {/* LEFT: Cart Items */}
         <div className="cart-left">
           <h3>Order Summary</h3>
 
@@ -68,7 +67,6 @@ const ShoppingCart = () => {
           ))}
         </div>
 
-        {/* RIGHT: Summary + Customer Details */}
         <div className="cart-summary">
           <h3>Payment Method</h3>
           <select
@@ -80,7 +78,6 @@ const ShoppingCart = () => {
             <option value="Online Payment">Online Payment</option>
           </select>
 
-          {/* 🆕 Customer Info Form (moved here) */}
           <div className="user-info-form">
             <h3>Customer Details</h3>
             <input

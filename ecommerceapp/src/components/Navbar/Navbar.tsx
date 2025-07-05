@@ -47,7 +47,6 @@ const Navbar = () => {
           </Box>
         </Box>
 
-        {/* Center: Search */}
         <Box className="navbar-center">
           <Box className="search-box">
             <SearchIcon className="search-icon" />
@@ -55,7 +54,6 @@ const Navbar = () => {
           </Box>
         </Box>
 
-        {/* Right: Cart + Auth */}
         <Box className="navbar-right">
           <Link to="/shopping-cart">
             <IconButton className="cart-icon">

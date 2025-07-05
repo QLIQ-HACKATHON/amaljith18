@@ -22,7 +22,7 @@ const Signup = () => {
     toast.success("Account created successfully!");
     setTimeout(() => {
       navigate("/login");
-    }, 1000); // Delay to let toast show
+    }, 1000);
   };
 
   return (

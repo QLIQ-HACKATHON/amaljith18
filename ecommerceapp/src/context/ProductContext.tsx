@@ -30,7 +30,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (data?.products) {
       setProducts(data.products);
-      setFilteredProducts(data.products); // Default: all
+      setFilteredProducts(data.products);
     }
   }, [data]);
 

@@ -39,7 +39,7 @@ const CartPage = () => {
     toast.success("Product added to cart successfully!");
     setTimeout(() => {
       navigate("/");
-    }, 1500); // delay to show toast before redirect
+    }, 1500);
   };
 
   return (

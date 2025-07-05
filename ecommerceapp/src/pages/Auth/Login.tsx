@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // if not already imported globally
+import "react-toastify/dist/ReactToastify.css";
 import "./Auth.scss";
 
 const Login = () => {
@@ -25,7 +25,7 @@ const Login = () => {
         } else {
           navigate("/");
         }
-      }, 1000); // wait for toast before redirect
+      }, 1000);
     } else {
       toast.error("Invalid credentials");
     }
