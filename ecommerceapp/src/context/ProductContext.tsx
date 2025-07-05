@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // src/context/ProductContext.tsx
 import {
   createContext,
   useContext,
   useEffect,
   useState,
-  ReactNode,
+  type ReactNode,
 } from "react";
 import useAxiosFetch from "../custom-hooks/useAxiosFetch";
 import type { Product } from "../types/Product";
@@ -23,7 +24,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [category, setCategory] = useState("all");
 
-  const { data, loading, error } = useAxiosFetch<{ products: Product[] }>(
+  const { data } = useAxiosFetch<{ products: Product[] }>(
     "https://dummyjson.com/products/category/groceries"
   );
 

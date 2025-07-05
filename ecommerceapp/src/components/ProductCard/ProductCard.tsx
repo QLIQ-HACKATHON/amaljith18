@@ -4,7 +4,7 @@ import "./ProductCard.scss";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const navigate = useNavigate();
-  const addToCart = (e) => {
+  const addToCart = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     navigate(`/cart/${product.id}`);
   };

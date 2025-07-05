@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from "react";
 
 interface User {
@@ -27,7 +28,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = (email: string, password: string): boolean => {
     if (email === "admin@gmail.com" && password === "admin123") {
-      const adminUser = { email, password, role: "admin" };
+      const adminUser: User = { email, password, role: "admin" };
       sessionStorage.setItem("user", JSON.stringify(adminUser));
       setUser(adminUser);
       return true;
@@ -38,7 +39,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const { email: storedEmail, password: storedPass } =
         JSON.parse(storedUser);
       if (email === storedEmail && password === storedPass) {
-        const user = { email, password, role: "user" };
+        const user: User = { email, password, role: "user" };
         sessionStorage.setItem("user", JSON.stringify(user));
         setUser(user);
         return true;

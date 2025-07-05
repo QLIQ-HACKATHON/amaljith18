@@ -5,9 +5,9 @@ import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   const navigate = useNavigate();
-  const addToCart = (e) => {
+  const addToCart = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    navigate(`/cart/${product.id}`);
+    if (product) navigate(`/cart/${product.id}`);
   };
   const { id } = useParams();
   const {

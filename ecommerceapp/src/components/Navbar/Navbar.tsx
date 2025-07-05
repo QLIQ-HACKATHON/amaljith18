@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   AppBar,
   Toolbar,
@@ -21,13 +22,12 @@ const Navbar = () => {
   const { getCartCount } = useCart();
   const cartCount = getCartCount();
 
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
 
   return (
     <AppBar position="fixed" color="default" elevation={1} className="navbar">
       <Toolbar className="navbar-toolbar">
-        {/* Left: Logo + Nav Links */}
         <Box className="navbar-left">
           <Link to="/">
             <img src={logo} alt="Logo" className="logo" />

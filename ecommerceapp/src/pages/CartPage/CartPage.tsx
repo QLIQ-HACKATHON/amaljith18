@@ -23,7 +23,7 @@ const CartPage = () => {
   const total = (product.price * quantity).toFixed(2);
   const discountedPrice = (
     product.price *
-    (1 - product.discountPercentage / 100)
+    (1 - (product.discountPercentage ?? 0) / 100)
   ).toFixed(2);
   const isMax = quantity >= product.stock;
 
